@@ -7,7 +7,7 @@ button.addEventListener("click", function (e) {
   const additionalFilters = document.querySelector(
     'input[name="Field111"]:checked'
   ).value;
-  fetch("/read", {
+  fetch("http://localhost:8080/read", {
     method: "POST",
     body: JSON.stringify({ songTitleValue, artistValue, additionalFilters }),
   })
